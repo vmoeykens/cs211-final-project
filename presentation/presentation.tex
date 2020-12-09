@@ -1,0 +1,100 @@
+\documentclass{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+
+\usetheme{Madrid} 
+
+\makeatother
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.4\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertshortauthor
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.6\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle\hspace*{3em}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{1ex}
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+%Information to be included in the title page:
+\title{CS211 - Data Privacy: Final Project}
+\author{Vincent Moeykens}
+\institute{The University of Vermont}
+\date{Fall 2020}
+
+
+
+\begin{document}
+
+\frame{\titlepage}
+
+% GOALS
+\begin{frame}
+\frametitle{Project Goals}
+This project had a few simple goals:
+\begin{enumerate}
+\item Identify a data with potential PII
+\item Determine which statistics would be valuable from this data
+\item Create a sysytem to generate differentially private statistics from this data (using a reasonable privacy budget: $\epsilon$)
+\item Automatically generate a PDF report when finished
+\end{enumerate}
+\end{frame}
+
+% Dataset
+\begin{frame}
+\frametitle{Dataset}
+The dataset I used from this project comes from \textit{Kaggle}. The dataset contains information about credit card customers at some company. \\
+
+While the data itself does not contain simple PII such as names, dates of birth, or SSN; it does contain information such as:
+\begin{itemize}
+ \item<1-> Customer Age
+ \item<2-> Customer Gender
+ \item<3-> Education Level
+ \item<4-> Marital Status
+ \item<5-> Income Level
+ \item<6-> \textbf{All things that could be used to re-identify individuals!}
+\end{itemize}
+\end{frame}
+
+% Statistics
+\begin{frame}
+\frametitle{Statistics}
+I picked a few basic statistics that I thought an analyst might be interested in. They are: 
+\begin{itemize}
+\item Average Customer Age
+\item Average Months on Book
+\item Average Credit Limit
+\item Count of most common Income Ranges
+\item Count of most common Education Level
+\item Average Credit Limit of Customers younger than 33y/o vs Average Credit Limit of Customers older than 33y/o
+\item Most Common Income Range of Customers with a College Degree vs Customers Without
+\end{itemize}
+\end{frame}
+
+% Privacy Strategy
+\begin{frame}
+\frametitle{Privacy Strategy}
+To generate the differentially private statistics, I used a few different strategies. 
+\newline
+\begin{columns}
+
+\column{0.5\textwidth}
+For all average statistics, I first use the $above\_threshold$ method to deteremine a upper clipping parameter. I then generate noisy sums and counts using the laplace mechanism (and a portion of the total epsilon alloted for this query). I then divide the noisy sum by the noisy count to get a differentially private average by post processing.
+
+\column{0.5\textwidth}
+To determine the category that has the maximum number of occurrences for a parameter, I use the report-noisy-max method. 
+\end{columns}
+\end{frame}
+
+% Report Generation
+\begin{frame}
+\frametitle{Report Generation}
+Finally, I calculate error percentages for average queries, and verify that the report noisy max results match the expected results. This data then gets automatically generated into a .tex file, and compiled to a pdf (if the user has a LaTeX compiler installed)
+
+\end{frame}
+
+\end{document}
