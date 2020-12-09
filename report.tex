@@ -1,0 +1,220 @@
+\documentclass{article}%
+\usepackage[T1]{fontenc}%
+\usepackage[utf8]{inputenc}%
+\usepackage{lmodern}%
+\usepackage{textcomp}%
+\usepackage{lastpage}%
+%
+\title{Credit Card Data Report}%
+\date{\today}%
+%
+\begin{document}%
+\normalsize%
+\maketitle%
+All data labeled "differentially private" in this document satisfies differential privacy for %
+$\epsilon$=%
+100 by sequential composition%
+\section{Statistics}%
+\label{sec:Statistics}%
+\subsection{Basic Averages}%
+\label{subsec:BasicAverages}%
+The follwing statistics were all generated using the sparse vector technique to determine a clipping parameter for the data, and then generating differentially private sums and counts to find a differentially private average.%
+\subsubsection{Average Age}%
+\label{ssubsec:AverageAge}%
+The average age of all credit card customers is 46.33, the differentially private average age of all customers is 46.36. This gives an error of 0.0811\%.
+
+%
+\subsubsection{Average Months on Book}%
+\label{ssubsec:AverageMonthsonBook}%
+The average months on the book of all credit card customers is 35.93, the differentially private average age of all customers is 35.98. This gives an error of 0.1568\%.
+
+%
+\subsubsection{Average Credit Limit}%
+\label{ssubsec:AverageCreditLimit}%
+The average credit limit of all credit card customers is 8631.95, the differentially private average age of all customers is 8615.92. This gives an error of 0.1858\%.
+
+%
+\subsection{Basic Counts}%
+\label{subsec:BasicCounts}%
+The follwing statistics were all generated using the report noisy max method to determine the highest count in a given parameter.%
+\subsubsection{Income Categories}%
+\label{ssubsec:IncomeCategories}%
+The most common income category of all credit card customers is Less than \$40K. The most common income category as determined by using a differentially private method is Less than \$40K.
+
+%
+\subsubsection{Income Categories}%
+\label{ssubsec:IncomeCategories}%
+The most common education level of all credit card customers is Graduate. The most common education level as determined by using a differentially private method is Graduate.
+
+%
+\subsection{Conditional Averages}%
+\label{subsec:ConditionalAverages}%
+\subsubsection{Average Credit Limit for Customers 33 years old and younger.}%
+\label{ssubsec:AverageCreditLimitforCustomers33yearsoldandyounger.}%
+The average credit limit of credit card customers who are 33 years old and younger is 7212.7, the differentially private average is 3122.16. This gives an error of 56.713\%.
+
+%
+\subsubsection{Average Credit Limit for Customers older than 33 years old.}%
+\label{ssubsec:AverageCreditLimitforCustomersolderthan33yearsold.}%
+The average credit limit of credit card customers who are over 33 years old is 8719.6, the differentially private average is 8689.63. This gives an error of 0.3436\%.
+
+%
+\subsection{Conditional Counts}%
+\label{subsec:ConditionalCounts}%
+\subsubsection{Most Common Income Category for College Educated Customers}%
+\label{ssubsec:MostCommonIncomeCategoryforCollegeEducatedCustomers}%
+The most common income level for college educated customers is Less than \$40K, the most common one calculated with a differentially private method is Less than \$40K. 
+
+%
+\subsubsection{Most Common Income Category for non College Educated Customers}%
+\label{ssubsec:MostCommonIncomeCategoryfornonCollegeEducatedCustomers}%
+The most common income level for non college educated customers is Less than \$40K, the most common one calculated with a differentially private method is Less than \$40K. 
+
+%
+\end{document}\documentclass{article}%
+\usepackage[T1]{fontenc}%
+\usepackage[utf8]{inputenc}%
+\usepackage{lmodern}%
+\usepackage{textcomp}%
+\usepackage{lastpage}%
+%
+\title{Credit Card Data Report}%
+\date{\today}%
+%
+\begin{document}%
+\normalsize%
+\maketitle%
+All data labeled "differentially private" in this document satisfies differential privacy for %
+$\epsilon$=%
+100 by sequential composition%
+\section{Statistics}%
+\label{sec:Statistics}%
+\subsection{Basic Averages}%
+\label{subsec:BasicAverages}%
+The follwing statistics were all generated using the sparse vector technique to determine a clipping parameter for the data, and then generating differentially private sums and counts to find a differentially private average.%
+\subsubsection{Average Age}%
+\label{ssubsec:AverageAge}%
+The average age of all credit card customers is 46.33, the differentially private average age of all customers is 46.36. This gives an error of 0.0811\%.
+
+%
+\subsubsection{Average Months on Book}%
+\label{ssubsec:AverageMonthsonBook}%
+The average months on the book of all credit card customers is 35.93, the differentially private average age of all customers is 35.98. This gives an error of 0.1568\%.
+
+%
+\subsubsection{Average Credit Limit}%
+\label{ssubsec:AverageCreditLimit}%
+The average credit limit of all credit card customers is 8631.95, the differentially private average age of all customers is 8615.92. This gives an error of 0.1858\%.
+
+%
+\subsection{Basic Counts}%
+\label{subsec:BasicCounts}%
+The follwing statistics were all generated using the report noisy max method to determine the highest count in a given parameter.%
+\subsubsection{Income Categories}%
+\label{ssubsec:IncomeCategories}%
+The most common income category of all credit card customers is Less than \$40K. The most common income category as determined by using a differentially private method is Less than \$40K.
+
+%
+\subsubsection{Income Categories}%
+\label{ssubsec:IncomeCategories}%
+The most common education level of all credit card customers is Graduate. The most common education level as determined by using a differentially private method is Graduate.
+
+%
+\subsection{Conditional Averages}%
+\label{subsec:ConditionalAverages}%
+\subsubsection{Average Credit Limit for Customers 33 years old and younger.}%
+\label{ssubsec:AverageCreditLimitforCustomers33yearsoldandyounger.}%
+The average credit limit of credit card customers who are 33 years old and younger is 7212.7, the differentially private average is 3122.16. This gives an error of 56.713\%.
+
+%
+\subsubsection{Average Credit Limit for Customers older than 33 years old.}%
+\label{ssubsec:AverageCreditLimitforCustomersolderthan33yearsold.}%
+The average credit limit of credit card customers who are over 33 years old is 8719.6, the differentially private average is 8689.63. This gives an error of 0.3436\%.
+
+%
+\subsection{Conditional Counts}%
+\label{subsec:ConditionalCounts}%
+\subsubsection{Most Common Income Category for College Educated Customers}%
+\label{ssubsec:MostCommonIncomeCategoryforCollegeEducatedCustomers}%
+The most common income level for college educated customers is Less than \$40K, the most common one calculated with a differentially private method is Less than \$40K. 
+
+%
+\subsubsection{Most Common Income Category for non College Educated Customers}%
+\label{ssubsec:MostCommonIncomeCategoryfornonCollegeEducatedCustomers}%
+The most common income level for non college educated customers is Less than \$40K, the most common one calculated with a differentially private method is Less than \$40K. 
+
+%
+\end{document}\documentclass{article}%
+\usepackage[T1]{fontenc}%
+\usepackage[utf8]{inputenc}%
+\usepackage{lmodern}%
+\usepackage{textcomp}%
+\usepackage{lastpage}%
+%
+\title{Credit Card Data Report}%
+\date{\today}%
+%
+\begin{document}%
+\normalsize%
+\maketitle%
+All data labeled "differentially private" in this document satisfies differential privacy for %
+$\epsilon$=%
+2.0 by sequential composition%
+\section{Statistics}%
+\label{sec:Statistics}%
+\subsection{Basic Averages}%
+\label{subsec:BasicAverages}%
+The follwing statistics were all generated using the sparse vector technique to determine a clipping parameter for the data, and then generating differentially private sums and counts to find a differentially private average.%
+\subsubsection{Average Age}%
+\label{ssubsec:AverageAge}%
+The average age of all credit card customers is 46.33, the differentially private average age of all customers is 46.02. This gives an error of 0.6633\%.
+
+%
+\subsubsection{Average Months on Book}%
+\label{ssubsec:AverageMonthsonBook}%
+The average months on the book of all credit card customers is 35.93, the differentially private average age of all customers is 35.94. This gives an error of 0.0452\%.
+
+%
+\subsubsection{Average Credit Limit}%
+\label{ssubsec:AverageCreditLimit}%
+The average credit limit of all credit card customers is 8631.95, the differentially private average age of all customers is 8594.71. This gives an error of 0.4314\%.
+
+%
+\subsection{Basic Counts}%
+\label{subsec:BasicCounts}%
+The follwing statistics were all generated using the report noisy max method to determine the highest count in a given parameter.%
+\subsubsection{Income Categories}%
+\label{ssubsec:IncomeCategories}%
+The most common income category of all credit card customers is Less than \$40K. The most common income category as determined by using a differentially private method is Less than \$40K.
+
+%
+\subsubsection{Income Categories}%
+\label{ssubsec:IncomeCategories}%
+The most common education level of all credit card customers is Graduate. The most common education level as determined by using a differentially private method is Graduate.
+
+%
+\subsection{Conditional Averages}%
+\label{subsec:ConditionalAverages}%
+\subsubsection{Average Credit Limit for Customers 33 years old and younger.}%
+\label{ssubsec:AverageCreditLimitforCustomers33yearsoldandyounger.}%
+The average credit limit of credit card customers who are 33 years old and younger is 7212.7, the differentially private average is 1767.18. This gives an error of 75.4991\%.
+
+%
+\subsubsection{Average Credit Limit for Customers older than 33 years old.}%
+\label{ssubsec:AverageCreditLimitforCustomersolderthan33yearsold.}%
+The average credit limit of credit card customers who are over 33 years old is 8719.6, the differentially private average is 8724.82. This gives an error of 0.0599\%.
+
+%
+\subsection{Conditional Counts}%
+\label{subsec:ConditionalCounts}%
+\subsubsection{Most Common Income Category for College Educated Customers}%
+\label{ssubsec:MostCommonIncomeCategoryforCollegeEducatedCustomers}%
+The most common income level for college educated customers is Less than \$40K, the most common one calculated with a differentially private method is Less than \$40K. 
+
+%
+\subsubsection{Most Common Income Category for non College Educated Customers}%
+\label{ssubsec:MostCommonIncomeCategoryfornonCollegeEducatedCustomers}%
+The most common income level for non college educated customers is Less than \$40K, the most common one calculated with a differentially private method is Less than \$40K. 
+
+%
+\end{document}
